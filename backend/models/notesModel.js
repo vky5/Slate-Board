@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const storedDataSchema = new mongoose.Schema({
@@ -14,6 +15,6 @@ const storedDataSchema = new mongoose.Schema({
     }
 })
 
-const StoredData = mongoose.model(storedDataSchema);
+const StoredData = mongoose.model('StoredData', storedDataSchema);
 
 module.exports = storedDataSchema;
