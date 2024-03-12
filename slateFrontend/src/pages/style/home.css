@@ -1,0 +1,6 @@
+.home{
+    height: 100vh;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+}

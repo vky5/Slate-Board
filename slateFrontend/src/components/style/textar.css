@@ -1,0 +1,7 @@
+#notes{
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
+    height: 300px;
+    resize: vertical;
+}

@@ -12,12 +12,18 @@ const userData = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: [true, "Email is necessary for auth"],
-        unique: true
+        required: [true, "Please enter a an email"],
+        unique: true,
+        lowercase: true
     },
     password: {
         type: String,
-        required: [true,  'Password is necessary']
+        required: [true,  'Please enter a Password'],
+        minlength: 8
+    },
+    checkPassword:{
+        type: String,
+        required: [true, 'Please confirm your Password']
     },
     date: {
         type: Date,
