@@ -1,0 +1,8 @@
+.centre-body{
+    background-color: #344955;
+    /* background-color: #0077D4; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

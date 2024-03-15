@@ -1,6 +1,6 @@
-// import Navbar from "./components/Navbar"
-// import Home from "./pages/Home"
-import Admin from "./pages/Admin"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+// import Admin from "./pages/Admin"
 
 function App() {
   const url = import.meta.env.VITE_URL + ':' + import.meta.env.VITE_PORT;
@@ -8,9 +8,11 @@ function App() {
   
   return (
     <>
-      <Admin
+      {/* <Admin
         url={url}
-      />
+      /> */}
+      <Navbar />
+      <Home />
     </>
   )
 }

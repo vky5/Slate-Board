@@ -21,9 +21,12 @@ const router = express.Router();
 //         next();
 //     }, userController.storeUser);
 
+
 router
-    .post('/signup', userController.storeUser);
-    
+.post('/signup', userController.storeUser);
+
+// TODO add authentication middleware to protect admin route
+
 router
     .route('/admin')
     .get(userController.adminAllUser)

@@ -1,11 +1,11 @@
-// import Textar from '../components/Textar';
+import Textar from '../components/Textar';
 
 import './style/home.css';
 
 function Home() {
   return (
-    <div>
-
+    <div className='centre-body'>
+      <Textar />
     </div>
   )
 

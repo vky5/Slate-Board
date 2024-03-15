@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from '../components/Card';
+import PropTypes from 'prop-types';
 
 function Admin(props) {
     const [userList, setUserList] = useState([]);
@@ -8,14 +9,14 @@ function Admin(props) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(props.url);
+                const response = await fetch(props.url + '/api/v1/auth/admin');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const contentType = response.headers.get('content-type');
                 if (contentType && contentType.includes('application/json')) {
                     const data = await response.json();
-                    setUserList(data);
+                    setUserList(data.data);
                 } else {
                     throw new Error('Response is not in JSON format');
                 }
@@ -25,9 +26,12 @@ function Admin(props) {
         };
 
         fetchData();
+
+        console.log(userList);
     }, [props.url]);
 
     return (
+        //TODO create an admin pannel 
         <div>
             {error ? (
                 <p>Error: {error}</p>
@@ -43,6 +47,10 @@ function Admin(props) {
             )}
         </div>
     );
+}
+
+Admin.propTypes = {
+    url: PropTypes.string.isRequired
 }
 
 export default Admin;

@@ -3,7 +3,8 @@ import './style/textar.css'
 function Textar() {
   return (
     <div className='text'>
-      {/* <textarea name="notes" id="notes" cols="60" rows="30"></textarea> */}
+      <input type="text" placeholder='Add heading here...' className='notes-heading' />
+      <textarea name="notes" id="notes"></textarea>
     </div>
   )
 }

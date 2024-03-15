@@ -5,11 +5,13 @@
 }
 
 .header{
+    color: #D4D4D4;
     padding: 10px;
     background-color: #222831;
     display: flex;
     justify-content: space-between;
 }
+
 
 .pages{
     display: flex;
