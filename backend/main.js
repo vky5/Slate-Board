@@ -3,7 +3,9 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const userRoutes = require('./routes/userRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
+const globalErrorHandler = require('./controllers/globalErrorHandler');
 
 const app = express();
 
@@ -20,5 +22,9 @@ app.get('/', (req, res)=>{
 })
 
 app.use('/api/v1/auth', userRoutes); 
+app.use('/api/v1/admin', adminRoutes);
+
+app.use(globalErrorHandler);
+
 
 module.exports = app;

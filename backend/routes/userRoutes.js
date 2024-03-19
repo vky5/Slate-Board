@@ -23,23 +23,6 @@ const router = express.Router();
 
 
 router
-.post('/signup', userController.storeUser);
+    .post('/signup', userController.storeUser);
 
-// TODO add authentication middleware to protect admin route
-
-router
-    .route('/admin')
-    .get(userController.adminAllUser)
-    .post(userController.adminNewUser);
-
-
-// making changes into account by admin
-
-router
-    .route('/admin/:id')
-    .get(userController.adminGetUserById)
-    .patch(userController.adminEditUser)
-    .delete(userController.adminDeleteUser);
-    
-
-module.exports = router;
+module.exports= router;
