@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs');
 const validator = require('validator');
 
-const userData = new mongoose.Schema({
+const userDataSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "User Must have username"]
@@ -27,7 +27,13 @@ const userData = new mongoose.Schema({
     },
     checkPassword:{
         type: String,
-        required: [true, 'Please confirm your Password']
+        required: [true, 'Please confirm your Password'],
+        validate: {
+            validator: function (el){
+                return el===this.password;
+            },
+            message: "Passwords are not the same"
+        }
     },
     date: {
         type: Date,
@@ -35,6 +41,22 @@ const userData = new mongoose.Schema({
     }
 })
 
-const UserData = mongoose.model('UserData', userData);
+userDataSchema.pre('save', async function(next){
+    if (!this.isModified('password')) return next(); 
+
+    // hash the password with cores of 12
+    this.password = await bcrypt.hash(this.password, 12); 
+
+    // delete the checkPassword field
+    this.checkPassword = undefined; 
+    
+    next();
+
+})
+
+const UserData = mongoose.model('UserData', userDataSchema);
 
 module.exports = UserData;
+
+
+//TODO : add validators to all the field with appropriate message
