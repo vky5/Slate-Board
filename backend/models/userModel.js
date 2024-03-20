@@ -17,7 +17,7 @@ const userDataSchema = new mongoose.Schema({
         required: [true, "Please enter a an email"],
         unique: true,
         lowercase: true,
-        validator: [validator.isEmail, 'Please enter a valid email']
+        validate: [validator.isEmail, 'Please enter a valid email']
     },
     password: {
         type: String,
@@ -53,6 +53,14 @@ userDataSchema.pre('save', async function(next){
     next();
 
 })
+
+// an instance method - an instance is the method which is going to be available on all documents of a certain collection
+
+userDataSchema.methods.correctPassword = async function(candidatePassword, userPassword){
+    // this.password // not available as we have select = false
+    return await bcrypt.compare(candidatePassword, userPassword)
+}
+
 
 const UserData = mongoose.model('UserData', userDataSchema);
 
