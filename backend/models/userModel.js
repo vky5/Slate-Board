@@ -35,6 +35,9 @@ const userDataSchema = new mongoose.Schema({
             message: "Passwords are not the same"
         }
     },
+    passwordChangedAt: {
+        type: Date
+    },
     date: {
         type: Date,
         default: Date.now
@@ -59,6 +62,18 @@ userDataSchema.pre('save', async function(next){
 userDataSchema.methods.correctPassword = async function(candidatePassword, userPassword){
     // this.password // not available as we have select = false
     return await bcrypt.compare(candidatePassword, userPassword)
+}
+
+userDataSchema.methods.changedPasswordAfter = function(JWTTimestamp){
+    if (this.passwordChangedAt){ // if this property exists the user has changed their password and if not then not and only if it exists we need to compare date to check if the JWT was issued b4 password change or after password change and we want it to be after password changed
+        const changedTimeStamp = parseInt(this.passwordChangedAt.getTime()/1000, 10);
+        // console.log(this.passwordChangedAt, JWTTimestamp); 
+
+        return JWTTimestamp < changedTimeStamp;
+        
+    } 
+
+    return false
 }
 
 
