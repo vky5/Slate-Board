@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const notesRoute = require('./routes/notesRoutes');
 
 const globalErrorHandler = require('./controllers/globalErrorHandler');
 
@@ -23,6 +24,7 @@ app.get('/', (req, res)=>{
 
 app.use('/api/v1/auth', userRoutes); 
 app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/notes', notesRoute);
 
 app.use(globalErrorHandler);
 

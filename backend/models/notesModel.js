@@ -2,19 +2,19 @@
 const mongoose = require('mongoose');
 
 const storedDataSchema = new mongoose.Schema({
-    username: {
+    heading: {
         type: String,
-        required: [true, 'Must have a username']
+        unique: true,
+        required: [true, 'Must have a heading']
     },
     tags:{
         type: Array
     },
-    data:{
-        type: String,
-        default: ""
+    body:{
+        type: String
     }
 })
 
 const StoredData = mongoose.model('StoredData', storedDataSchema);
 
-module.exports = storedDataSchema;
+module.exports = StoredData;

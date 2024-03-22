@@ -27,7 +27,6 @@ const signup = catchAsync (async (req, res, next) => {
         return next(new AppError('User can not be created', 400));
     }
 
-    console.log(token);
 
     res.status(201).json({
         status: 'success',
@@ -54,7 +53,6 @@ const login = catchAsync( async (req, res, next)=>{
         return next(new AppError('Invalid email or password'), 401) // 401 is unauthorized
     }
 
-    console.log(user);
     const token = signToken(user._id);
 
     res.status(200).json({

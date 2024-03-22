@@ -1,0 +1,247 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "BCS2-9d7YGJtS8uzxxRcz",
+      "type": "rectangle",
+      "x": 506.8499450683594,
+      "y": 136.69500732421875,
+      "width": 535.7099914550781,
+      "height": 52.52998352050781,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1469925433,
+      "version": 55,
+      "versionNonce": 205210967,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1711092633822,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "WZ3xJn_TDtTxKBFomCkw8",
+      "type": "arrow",
+      "x": 755.5419730079814,
+      "y": 183.46505737304688,
+      "width": 1.0917669040657074,
+      "height": 111.14177634499299,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1732651513,
+      "version": 130,
+      "versionNonce": 1610834519,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1711092812428,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1.0917669040657074,
+          111.14177634499299
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "RbChEeMRZR8XpzVysoj31",
+        "focus": 0.1396815177661556,
+        "gap": 6.4100494384765625
+      },
+      "endBinding": {
+        "elementId": "-ZGwvzKkwq5g1CM8fn_7w",
+        "focus": 0.010157357099575624,
+        "gap": 3.925059925426126
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "mJTkIlz2AAdz3ljAOBx-v",
+      "type": "freedraw",
+      "x": 546.2100219726562,
+      "y": 150.135009765625,
+      "width": 0.0001,
+      "height": 0.0001,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 216889721,
+      "version": 3,
+      "versionNonce": 7785399,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1711092608088,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0001,
+          0.0001
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "id": "RbChEeMRZR8XpzVysoj31",
+      "type": "text",
+      "x": 543.3300170898438,
+      "y": 152.0550079345703,
+      "width": 492.93951416015625,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 196993049,
+      "version": 88,
+      "versionNonce": 371075511,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "WZ3xJn_TDtTxKBFomCkw8",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1711092635836,
+      "link": null,
+      "locked": false,
+      "text": "Store all created notes ID in user's notes array",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 17,
+      "containerId": null,
+      "originalText": "Store all created notes ID in user's notes array",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "-ZGwvzKkwq5g1CM8fn_7w",
+      "type": "rectangle",
+      "x": 492.8274258700285,
+      "y": 298.531893643466,
+      "width": 523.6636075106533,
+      "height": 132.96816739169037,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 695882489,
+      "version": 65,
+      "versionNonce": 854604823,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "WZ3xJn_TDtTxKBFomCkw8",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1711092812428,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "6Y1sYvQJ2wdPtLywB2tZ9",
+      "type": "text",
+      "x": 552.9909446022727,
+      "y": 318.8500255237926,
+      "width": 461.19952392578125,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1621067639,
+      "version": 407,
+      "versionNonce": 1308597945,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1711092805373,
+      "link": null,
+      "locked": false,
+      "text": "when jwt verification completes, the list of \nall his notes will be fetched and displayed\nin right hand side and the first note document\nis called completely.",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 92,
+      "containerId": null,
+      "originalText": "when jwt verification completes, the list of \nall his notes will be fetched and displayed\nin right hand side and the first note document\nis called completely.",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
