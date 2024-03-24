@@ -7,11 +7,17 @@ const router = express.Router();
 
 router
     .route('/')
-    .get(authController.jwtValidate, notesController.showAllNotes)
-    .post(notesController.saveNotes);
+    .get(
+        authController.jwtValidate,
+        notesController.getNotes
+    )
+    .post(
+        authController.jwtValidate,
+        notesController.saveNotes
+    )
 
 
 
 
 
-module.exports = router
+module.exports = router;

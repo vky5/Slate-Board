@@ -6,6 +6,7 @@ const util = require('util');
 
 const jwt = require('jsonwebtoken');
 
+// this takes user id and create JWT
 const signToken = id=>{
     return jwt.sign({id}, process.env.JWT_SECRET, { 
         expiresIn: process.env.JWT_EXPIRES_IN
@@ -13,6 +14,20 @@ const signToken = id=>{
     // the first argument is payload and second argument is secret. The header will be automatically generated
 }
 
+
+// To create and send JWT
+const createAndSendJWT = (user, res)=>{
+    const token = signToken(user._id);
+
+    res.status(201).json({
+        status: 'success',
+        token,
+        data: user
+    });
+
+}
+
+// if the user isnt signed up they can sign up using this controller
 const signup = catchAsync (async (req, res, next) => {
     const newUser = await UserData.create({
         name: req.body.name,
@@ -21,22 +36,15 @@ const signup = catchAsync (async (req, res, next) => {
         password: req.body.password,
         checkPassword: req.body.checkPassword
     });
-      
-    const token = signToken(newUser._id);
-
+    
     if (!newUser){
         return next(new AppError('User can not be created', 400));
     }
-
-    res.status(201).json({
-        status: 'success',
-        token,
-        data: newUser
-    });
-
+      
+    createAndSendJWT(newUser, res);
 });
 
-
+// if the info about user is avaliable in DB and user will get JWT
 const login = catchAsync( async (req, res, next)=>{
     const {email, password} = req.body;
 
@@ -53,15 +61,10 @@ const login = catchAsync( async (req, res, next)=>{
         return next(new AppError('Invalid email or password', 401)) // 401 is unauthorized
     }
 
-    const token = signToken(user._id);
-
-    res.status(200).json({
-        status: 'success',
-        token
-    })
+    createAndSendJWT(user, res);
 })
 
-
+// if JWT is correct user can then go to other controllers in the middleware
 const jwtValidate = catchAsync(async(req, res, next)=>{
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
