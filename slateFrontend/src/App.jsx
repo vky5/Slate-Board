@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
+// import Home from "./pages/Home"
 // import Admin from "./pages/Admin"
 import Login from "./pages/Login";
 function App() {
@@ -12,8 +12,8 @@ function App() {
         url={url}
       /> */}
       <Navbar />
-      <Home />
-      {/* <Login /> */}
+      {/* <Home /> */}
+      <Login />
     </>
   )
 }
